@@ -9,12 +9,8 @@ import java.util.List;
 @Service
 public class ChuckNorrisJokeService {
 
-    public List<Joke> getJokes(){
-        List<Joke> jokes = new ArrayList<>();
-        for (int i = 0; i < 4; i++) {
-            jokes.add(new Joke(new guru.springframework.norris.chuck.ChuckNorrisQuotes().getRandomQuote()));
-        }
-        return jokes;
+    public Joke getJoke(){
+         return new Joke(new guru.springframework.norris.chuck.ChuckNorrisQuotes().getRandomQuote());
     }
 
 }
